@@ -1,0 +1,32 @@
+<div style="font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px;">
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; margin-bottom: 20px;">
+        <h1 style="color: #2E7D32; margin: 0;">🌱 Almanaque Plants vs Zombies</h1>
+        <a href="/novo" style="background-color: #4CAF50; color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-weight: bold;">+ Nova Planta</a>
+    </div>
+
+    <table style="width: 100%; border-collapse: collapse; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <thead>
+            <tr style="background-color: #2E7D32; color: white; text-align: left;">
+                <th style="padding: 12px;">Nome</th>
+                <th style="padding: 12px;">Tipo</th>
+                <th style="padding: 12px;">Custo (Sol)</th>
+                <th style="padding: 12px;">Recarga</th>
+                <th style="padding: 12px;">Dano</th>
+                <th style="padding: 12px;">Descrição</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each plantas}}
+            <tr style="border-bottom: 1px solid #ddd; background-color: #f9f9f9;">
+                <td style="padding: 12px; font-weight: bold; color: #333;">{{this.nome}}</td>
+                <td style="padding: 12px;"><span style="background: #e0e0e0; padding: 3px 8px; border-radius: 3px; font-size: 12px;">{{this.tipo}}</span></td>
+                <td style="padding: 12px; color: #FFB300; font-weight: bold;">☀️ {{this.custoemsol}}</td>
+                <td style="padding: 12px;">{{this.recarregamento}}</td>
+                <td style="padding: 12px;">{{this.dano}}</td>
+                <td style="padding: 12px; color: #666; font-style: italic; font-size: 14px;">"{{this.descricao}}"</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
